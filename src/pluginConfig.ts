@@ -1,16 +1,24 @@
-import type { ExternalPluginConfig } from '@windy/interfaces';
+import type { ExternalPluginConfig } from '@windy/interfaces.d';
 
 const config: ExternalPluginConfig = {
-    name: 'windy-plugin-my-plugin',
-    version: '0.1.0',
-    icon: '🔌',
-    title: 'This is my first plugin',
-    description: 'This is my first plugin.',
-    author: 'John Doe (optional company name)',
+    name: 'windy-plugin-maidenhead-locator',
+    icon: '🌧️',
+    version: '0.0.1',
+
+    title: 'Maidenhead Locator Plugin',
+
+    description: 'This plugin calculates the maidenhead locator of the clicked point.',
+    author: 'Daniel Lingvay',
     repository: 'https://github.com/windycom/windy-plugin-template',
+
     desktopUI: 'rhpane',
-    mobileUI: 'fullscreen',
-    routerPath: '/my-plugin',
+    mobileUI: 'small',
+
+    addToContextmenu: true,
+
+    routerPath: '/maidenhead-locator/:lat?/:lon?',
+
+    listenToSingleclick: true,
 };
 
 export default config;
